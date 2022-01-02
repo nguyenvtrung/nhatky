@@ -47,10 +47,7 @@ body
     background-color: pink;
     color: #000;
 }
-a {
-    font-family: 'header__content';
-    text-decoration-line: none;
-}
+
 [trung="main"]
 {
     position: relative;  
@@ -158,6 +155,7 @@ header
     font-weight: 100;
     box-shadow: 8px 0 0;
     overflow: hidden;
+    text-decoration-line: none;
     animation: header__content 4s steps(var(--step))  infinite;
 }
 
