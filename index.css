@@ -133,45 +133,118 @@ body
         transform: rotate(180deg);
     }
 }
-
-.table thead th
+header
 {
-    border-left: 2px solid #dee2e6;
-    border-right: 2px solid #dee2e6;
-    border-top: none;
-    text-align: center;
-}
-.table thead th:first-child
-{
-    border-left: none;
-}
-.table thead th:last-child
-{
-    border-right: none;
-}
-
-.thongbao {
-    position: fixed;
-    background: #00000098;
-    left: 0;
-    top: 0;
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
 }
-
-.close
-{
-    display: none;
-}
-.thongbao p
+.header__content
 {
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: calc(100vw/14);
-    text-align: center;
+    left: 50%;
+    transform: translate(-50% , -50%);
     white-space: nowrap;
-    color: #04aa6d;
-    text-shadow: 2px 2px 0 #fff ,0 0 10px #04aa6d,0 0 10px #04aa6d,0 0 10px #04aa6d;
+    font-size: calc(100vh/18);
+}
+.header__content h1
+{
+    font-family: header__content;
+    font-weight: 100;
+    box-shadow: 8px 0 0;
+    overflow: hidden;
+    animation: header__content 4s steps(var(--step))  infinite;
+}
+
+@keyframes header__content {
+    0% , 100%
+    {
+        width: 2px;
+    }
+    50%,85%
+    {
+        width: var(--addAtrContent);
+    }
+}
+
+
+
+.header__menu
+{
+    position: fixed;
+    width: var(--header__menu-w);
+    height: var(--header__menu-h);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__menu_logo
+{
+    position: relative;
+    margin-left: var(--header__menu-flex-margin);
+    font-size: calc(var(--header__menu-h)/2);
+    font-family: header__content;
+    
+}
+.header__menu_logo::before
+{
+    content: 'Nguyễn Văn Trung';
+    line-height: var(--header__menu-h);
+}
+
+.header__menu_logo::after
+{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 34%;
+    left: 0;
+    animation: header__menu_logo_after 10s linear infinite;
+}
+@keyframes header__menu_logo_after {
+    0%,100%
+    {
+        background-color: green;
+        color: green;
+    }
+    50%
+    {
+        background-color: red;
+        color: red;
+    }
+    80%
+    {
+        background-color: blue;
+        color: blue;
+    }
+}
+#hieuung
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#hieuung i 
+{
+    position: absolute;
+    border-radius: 50%;
+    animation: star 10s linear infinite;
+
+}
+@keyframes star {
+    form
+    {
+        transform: translateY(200px) ;    
+    }
+    to
+    {
+        transform: translateY(-200px) ;  
+    }
 }
