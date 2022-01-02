@@ -47,6 +47,10 @@ body
     background-color: pink;
     color: #000;
 }
+a {
+    font-family: 'header__content';
+    text-decoration-line: none;
+}
 [trung="main"]
 {
     position: relative;  
