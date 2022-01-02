@@ -148,7 +148,7 @@ header
     white-space: nowrap;
     font-size: calc(100vh/18);
 }
-.header__content h1
+.header__content a
 {
     font-family: header__content;
     font-weight: 100;
