@@ -1,0 +1,26 @@
+#hieuung
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#hieuung i 
+{
+    position: absolute;
+    border-radius: 50%;
+    animation: star 10s linear infinite;
+
+}
+@keyframes star {
+    form
+    {
+        transform: translateY(200px) ;    
+    }
+    to
+    {
+        transform: translateY(-200px) ;  
+    }
+}

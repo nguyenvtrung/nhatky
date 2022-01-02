@@ -1,0 +1,89 @@
+header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.header__content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    white-space: nowrap;
+    font-size: calc(100vh/18);
+}
+.header__content h1
+{
+    font-family: header__content;
+    font-weight: 100;
+    box-shadow: 8px 0 0;
+    overflow: hidden;
+    animation: header__content 4s steps(var(--step))  infinite;
+}
+
+@keyframes header__content {
+    0% , 100%
+    {
+        width: 2px;
+    }
+    50%,85%
+    {
+        width: var(--addAtrContent);
+    }
+}
+
+
+
+.header__menu
+{
+    position: fixed;
+    width: var(--header__menu-w);
+    height: var(--header__menu-h);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__menu_logo
+{
+    position: relative;
+    margin-left: var(--header__menu-flex-margin);
+    font-size: calc(var(--header__menu-h)/2);
+    font-family: header__content;
+    
+}
+.header__menu_logo::before
+{
+    content: 'Nguyễn Văn Trung';
+    line-height: var(--header__menu-h);
+}
+
+.header__menu_logo::after
+{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 34%;
+    left: 0;
+    animation: header__menu_logo_after 10s linear infinite;
+}
+@keyframes header__menu_logo_after {
+    0%,100%
+    {
+        background-color: green;
+        color: green;
+    }
+    50%
+    {
+        background-color: red;
+        color: red;
+    }
+    80%
+    {
+        background-color: blue;
+        color: blue;
+    }
+}
